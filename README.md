@@ -9,7 +9,7 @@ https://hub.docker.com/
 Commands:<br/>
 docker pull <image><br/>
 docker run <image> -- if it can't find the image locally it pulls the image from the repository<br/>
-docker ps -- see what containers are running (ps means process status)<br/><br/>
+docker ps -- see what containers are running (ps means process status)<br/>
 
 Image vs Container: <br/>
 ![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerImage.PNG)
