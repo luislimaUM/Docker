@@ -12,4 +12,4 @@ docker run <image> -- if it can't find the image locally it pulls the image from
 
 docker ps -- see what containers are running (ps means process status)
 
-![alt text](https://github.com/luislimaUM/Dokcer/blob/main/dockerImage.PNG?raw=true)
+![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerImage.PNG)
