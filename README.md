@@ -38,4 +38,14 @@ Debbuging container<br/>
 <strong>exit</strong> --to exit terminal inside container <br/>
 
 Note: Most of the container images are based on some lightweight linux distributions so we won't have much of the linux commands or applications installed here (ex: curl command)
+<br/>
+Demo commands: <br/>
+<strong>docker pull mongo</strong> <br/>
+<strong>docker pull mongo-express</strong> <br/>
+<strong>docker network ls -- list networks</strong> <br/>
+<strong>docker network create mongo-network</strong> -- create network to connect mongo to mongo-express (mongo-express is UI to manage mongoDB) <br/>
+<strong>docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo</strong> -- run the mongo container, -e is environmental variable, username and password replace the default ones and set the name and network of the container. (this variables is in docker hub mongodb documentation)<br/>
+<strong>docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=pass --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express</strong><br/>
 
+Docker Compose<br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/dockercompose.PNG)<br/>
