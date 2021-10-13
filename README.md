@@ -14,6 +14,8 @@ Commands:<br/>
 <strong>docker ps</strong> --see what containers are running (ps means process status)<br/>
 <strong>docker stop {idContainer}</strong> --stop container running<br/>
 <strong>docker start {idContainer}</strong> --start container (docker run is two commands in one, docker pull + docker start), here we are not working with images but only with containers<br/>
+<strong> docker rm {container} </strong>
+<strong> docker rmi {image} </strong>
 <strong>docker ps -a</strong> --list running and stopped containers<br/>
 <strong>docker run --name {nameThatYouWant} {image}</strong> --if we want to add name to the container to be easier then use it instead using idContainer
 
@@ -34,7 +36,7 @@ If we have different containers running on the same port we need to bind the hos
 
 Debbuging container<br/>
 <strong>docker logs {idContainer}</strong> --see container logs<br/>
-<strong>docker exec -it {idContainer} /bin/bash</strong> --"it" means "interactive terminal, open terminal inside container <br/>
+<strong>docker exec -it {idContainer} /bin/bash</strong> --"it" means "interactive terminal, open terminal inside container. If error try /bin/sh to use shell instead bash.Some images don't have bash installed. <br/>
 <strong>exit</strong> --to exit terminal inside container <br/>
 
 Note: Most of the container images are based on some lightweight linux distributions so we won't have much of the linux commands or applications installed here (ex: curl command)<br/><br/>
@@ -48,3 +50,24 @@ Demo commands: <br/>
 
 Docker Compose<br/>
 ![alt text](https://github.com/luislimaUM/Docker/blob/main/dockercompose.PNG)<br/>
+
+![alt text](https://github.com/luislimaUM/Docker/blob/main/dockernetwork.PNG)<br/>
+
+Docker compose command example: <br/>
+<strong>docker-compose -f .\mongo.yaml up -d</strong> -- -f means file and "up" means that it will runn all containers mentioned in the yaml file. -d detached mode. <br/>
+<strong>docker-compose -f .\mongo.yaml down</strong> -- stop all containers and network <br/>
+
+Deploy application with dockerfile: <br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerDeploy.PNG)<br/>
+
+Dockerfile is a blueprint for build images.<br/>
+
+![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerFileExample.PNG)<br/>
+<strong>FROM {image}</strong> -- start by basing it on another image </br>
+<strong>ENV {environmentVariable}={environmentValue} </strong> -- Optionally define environment variables </br>
+<strong>RUN {linux_command}</strong> -- we can execute any linux command. Mkdir command will create directory inside of the container.</br>
+<strong>COPY {pathHost} {pathContainer}</strong> -- executes on the Host machine</br>
+<strong>CMD [...]</strong> -- execute an entrypoint command</br>
+
+<strong>docker build -t {imageName} {pathToDockerFile}</br>
+<strong>docker run my-app:1.0 </strong>
