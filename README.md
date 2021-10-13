@@ -37,8 +37,7 @@ Debbuging container<br/>
 <strong>docker exec -it {idContainer} /bin/bash</strong> --"it" means "interactive terminal, open terminal inside container <br/>
 <strong>exit</strong> --to exit terminal inside container <br/>
 
-Note: Most of the container images are based on some lightweight linux distributions so we won't have much of the linux commands or applications installed here (ex: curl command)
-<br/>
+Note: Most of the container images are based on some lightweight linux distributions so we won't have much of the linux commands or applications installed here (ex: curl command)<br/><br/>
 Demo commands: <br/>
 <strong>docker pull mongo</strong> <br/>
 <strong>docker pull mongo-express</strong> <br/>
