@@ -20,7 +20,7 @@ Commands:<br/>
 <strong>docker run --name {nameThatYouWant} {image}</strong> --if we want to add name to the container to be easier then use it instead using idContainer
 
 Image vs Container: <br/>
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerImage.PNG)
+![alt text](https://github.com/luislimaUM/Docker/images/blob/main/dockerImage.PNG)
 <br/>
 
 Docker vs VM: <br/>
