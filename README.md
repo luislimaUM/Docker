@@ -20,16 +20,16 @@ Commands:<br/>
 <strong>docker run --name {nameThatYouWant} {image}</strong> --if we want to add name to the container to be easier then use it instead using idContainer
 
 Image vs Container: <br/>
-![alt text](https://github.com/luislimaUM/Docker/images/blob/main/dockerImage.PNG)
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockerImage.PNG)
 <br/>
 
 Docker vs VM: <br/>
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockervsVM.PNG)
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockervsVM.PNG)
 
 Docker only virtualizes application layer and uses the kernel itself (part of the system that communicates with the hardware) while VM virtualizes both application layer and kernel layer.
 
 Container Port vs Host Port: <br/>
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerPorts.PNG)
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockerPorts.PNG)
 
 If we have different containers running on the same port we need to bind the host ports to the container ports<br/>
 <strong>docker run -p{hostPort}:{containerPort} {image}</strong>
@@ -49,20 +49,20 @@ Demo commands: <br/>
 <strong>docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=pass --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express</strong><br/>
 
 Docker Compose<br/>
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockercompose.PNG)<br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockercompose.PNG)<br/>
 
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockernetwork.PNG)<br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockernetwork.PNG)<br/>
 
 Docker compose command example: <br/>
 <strong>docker-compose -f .\mongo.yaml up -d</strong> -- -f means file and "up" means that it will runn all containers mentioned in the yaml file. -d detached mode. <br/>
 <strong>docker-compose -f .\mongo.yaml down</strong> -- stop all containers and network <br/>
 
 Deploy application with dockerfile: <br/>
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerDeploy.PNG)<br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockerDeploy.PNG)<br/>
 
 Dockerfile is a blueprint for build images.<br/>
 
-![alt text](https://github.com/luislimaUM/Docker/blob/main/dockerFileExample.PNG)<br/>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockerFileExample.PNG)<br/>
 <strong>FROM {image}</strong> -- start by basing it on another image </br>
 <strong>ENV {environmentVariable}={environmentValue} </strong> -- Optionally define environment variables </br>
 <strong>RUN {linux_command}</strong> -- we can execute any linux command. Mkdir command will create directory inside of the container.</br>
