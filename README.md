@@ -70,4 +70,7 @@ Dockerfile is a blueprint for build images.<br/>
 <strong>CMD [...]</strong> -- execute an entrypoint command</br>
 
 <strong>docker build -t {imageName} {pathToDockerFile}</br>
-<strong>docker run my-app:1.0 </strong>
+<strong>docker run my-app:1.0 </strong></br>
+
+Docker Flow:</br>
+![alt text](https://github.com/luislimaUM/Docker/blob/main/images/dockerFlow.PNG)<br/>
